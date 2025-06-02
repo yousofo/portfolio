@@ -22,16 +22,14 @@ export default function RootLayout({ children }) {
     return (
         // ${geistSans.variable} ${geistMono.variable}
         <html lang="en">
-            <body className={` antialiased  h-dvh`}>
-                <div className="test  h-full ">
-                    <div className=" h-[calc(100%-100px)]">{children}</div>
+            <body className={` antialiased  h-dvh test`}>
+                 <div className=" h-[calc(100%-100px)]">{children}</div>
                     {/* <div className="absolute inset-0 z-[-1] ">
                     <Image className=" w-full mask-inner mask-outer" src="/bg/circle.jpg" alt=""  fill={true} objectFit="contain" />
                   </div> */}
                     <div className="h-[100px]">
                       <Navbar />
                     </div>
-                </div>
             </body>
         </html>
     );
