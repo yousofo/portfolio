@@ -21,14 +21,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         // ${geistSans.variable} ${geistMono.variable}
+        //   <div className="absolute inset-0 z-[-1] ">
+        //   <Image className=" w-full mask-inner mask-outer" src="/bg/circle.jpg" alt=""  fill={true} objectFit="contain" />
+        // </div>
         <html lang="en">
-            <body className={` antialiased max-h-dvh h-dvh test`}>
-                 <div className=" h-[calc(100%-100px)]">{children}</div>
-                    {/* <div className="absolute inset-0 z-[-1] ">
-                    <Image className=" w-full mask-inner mask-outer" src="/bg/circle.jpg" alt=""  fill={true} objectFit="contain" />
-                  </div> */}
+            <body className={` antialiased h-dvh  test `}>
+                <div className=" h-[calc(100%-100px)]">{children}</div>
                     <div className="h-[100px]">
-                      <Navbar />
+                        <Navbar />
                     </div>
             </body>
         </html>

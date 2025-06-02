@@ -31,8 +31,7 @@
 body {
     color: var(--color-foreground);
     background: var(--color-background);
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+     font-family: Arial, Helvetica, sans-serif;
     @apply transition-colors;
 }
 .mask-outer {
