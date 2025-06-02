@@ -1,55 +1,71 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --background: 255, 255, 255;
-  --foreground: 23, 23, 23;
-  --test:rgba(8, 8, 8, .8);
+@custom-variant dark (&:where(.my-app-dark, .my-app-dark *));
+
+@theme {
+    --color-background: rgb(255, 255, 255);
+    --color-foreground: rgb(23, 23, 23);
+    --color-test: rgba(8, 8, 8, 0.8);
+
 }
-@media (prefers-color-scheme: dark) {
+
+    html {
+  --background: rgb(255, 255, 255);
+  --foreground: rgb(23, 23, 23);
+}
+
+    html.my-app-dark {
+        --color-background: rgb(10, 10, 10);
+        --color-foreground: rgb(237, 237, 237);
+    }
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: 10, 10, 10;
     --foreground: 237, 237, 237;
   }
-}
+} */
 
 /* Manual dark mode (overrides system preference) */
-html[data-theme="dark"] {
-  --background: 10, 10, 10;
-  --foreground: 237, 237, 237;
-}
-
-html[data-theme="light"] {
-  --background: 255, 255, 255;
-  --foreground: 23, 23, 23;
-}
 
 body {
-  color: rgb(var(--foreground));
-  background: rgb(var(--background));
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  @apply transition-colors ;
+    color: var(--color-foreground);
+    background: var(--color-background);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    @apply transition-colors;
 }
-.mask-outer{
-      mask: linear-gradient(180deg, rgba(0, 0, 0, 0) 20.983671171171174%, rgba(0, 0, 0, .28) 48.64864864864865%, rgba(0, 0, 0, 1) 79%) add;
+.mask-outer {
+    mask: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0) 20.983671171171174%,
+            rgba(0, 0, 0, 0.28) 48.64864864864865%,
+            rgba(0, 0, 0, 1) 79%
+        )
+        add;
 }
 .mask-inner {
-    mask: radial-gradient(50% 47% at 50% 46.6%, rgba(0, 0, 0, 0) 6.103955518018017%, rgba(0, 0, 0, .1) 22.726632882882882%, rgba(0, 0, 0, 1) 64.53582488738738%, rgba(0, 0, 0, 0) 100%) add
+    mask: radial-gradient(
+            50% 47% at 50% 46.6%,
+            rgba(0, 0, 0, 0) 6.103955518018017%,
+            rgba(0, 0, 0, 0.1) 22.726632882882882%,
+            rgba(0, 0, 0, 1) 64.53582488738738%,
+            rgba(0, 0, 0, 0) 100%
+        )
+        add;
 }
-.test{
-  /* backdrop-filter: blur(8px); */
+.test {
+    /* backdrop-filter: blur(8px); */
     /* background-color:  rgba(8, 8, 8, 1); */
     position: relative;
-   &::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg'  width='100%' height='100%'> <filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>");
-    opacity: 0.1; /* adjust as needed */
-   }
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml;utf8, <svg xmlns='http://www.w3.org/2000/svg'  width='100%' height='100%'> <filter id='noiseFilter'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noiseFilter)'/></svg>");
+        opacity: 0.1; /* adjust as needed */
+    }
 }

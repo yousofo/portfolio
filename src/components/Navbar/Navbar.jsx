@@ -14,11 +14,11 @@ export default function Navbar() {
     return (
         <div className="relative z-50 flex justify-center items-center w-full h-24 sm:h-20">
             <nav className="nav    sm:bg-transparent ">
-                <div className="nav-con  relative flex justify-center p-1 m-auto gap-1 w-max rounded-md text-foreground bg-opacity-30 bg-foreground">
+                <div className="nav-con  relative flex justify-center p-1 m-auto gap-1 w-max rounded-md text-foreground bg-foreground/30">
                     <button
                         id="aboutBtn"
                         onClick={() => handleNavClick(0)}
-                        className="about transition-colors cursor-pointer flex items-center px-3 rounded-md gap-1 bg-background bg-opacity-90"
+                        className="about transition-colors cursor-pointer flex items-center px-3 rounded-md gap-1 bg-background"
                     >
                         About
                     </button>
@@ -41,12 +41,12 @@ export default function Navbar() {
                          Resume 
                             {/* Contact &amp; CV */}
                         </a>
-                        <a
-                            className="border border-transparent [&>*]:rounded-md text-background "
+                        <div
+                            className="border border-transparent [&>*]:rounded-md text-background  "
                             id="contactBtn"
                         >
                             <ThemeSwitcher />
-                        </a>
+                        </div>
                     </nav>
                 </div>
             </nav>
