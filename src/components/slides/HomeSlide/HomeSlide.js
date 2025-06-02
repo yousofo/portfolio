@@ -1,3 +1,4 @@
+import WavyText from "@/components/wavy-text/WavyText";
 import * as motion from "motion/react-client";
  
 export default function HomeSlide() {
@@ -20,7 +21,7 @@ export default function HomeSlide() {
                 <p className="offers text   mt-1 text  text-yellow-600 font-bold dark:text-yellow-300/80">
                     {/* I&apos;m a <span>web developer</span> and I love building{" "}
         <span>web apps</span>! */}
-                    A Full Stack Web Developer
+                    <WavyText>A Full Stack Web Developer</WavyText>
                 </p>
                 <p className="offers text   mt-4 text-xl text-foreground/70">
                     {/* I&apos;m a <span>web developer</span> and I love building{" "}
