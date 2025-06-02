@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
         // </div>
         <html lang="en">
             <body className={` antialiased h-dvh  test w-screen overflow-hidden`}>
-                <div className=" h-[calc(100%-100px)]">{children}</div>
-                    <div className="h-[100px]">
+                <div className=" h-[calc(100%-100px)] overflow-hidden">{children}</div>
+                    <div className="h-[100px] overflow-hidden">
                         <Navbar />
                     </div>
             </body>

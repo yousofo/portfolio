@@ -35,6 +35,28 @@ export default function HomeSlide() {
         "bg-rose-300",
         "bg-sky-300",
     ];
+    //make hexColors
+    let hexColors = [
+        "#fbbf24",
+        "#60a5fa",
+        "#34d399",
+        "#f87171",
+        "#a78bfa",
+        "#ec4899",
+        "#facc15",
+        "#2dd4bf",
+        "#818cf8",
+        "#c084fc",
+        "#f472b6",
+        "#60a5fa",
+        "#a3e635",
+        "#22d3ee",
+        "#fb923c",
+        "#10b981",
+        "#ec4899",
+        "#8b5cf6",
+        "#e879f9",
+    ];
     let images = [
         "/skills/Microsoft_.NET_logo.svg.png",
         "/skills/Angular_full_color_logo.svg.png",
@@ -93,7 +115,7 @@ export default function HomeSlide() {
                 ))}
             </div>
             <div className="fixed   left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-90 z-[-1]">
-                {Array.from({ length: 10 }, (_, i) =>
+                {/* {Array.from({ length: 10 }, (_, i) =>
                     colors.map((color, index) => (
                         <SpinningBullet
                             key={`${i}-${index}`}
@@ -102,8 +124,9 @@ export default function HomeSlide() {
                             delay={i / 4 + Math.random() * 2}
                         />
                     ))
-                )}
+                )} */}
             </div>
         </div>
     );
 }
+
