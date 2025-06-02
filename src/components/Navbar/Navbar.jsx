@@ -24,13 +24,13 @@ export default function Navbar() {
             <div className="relative z-50 flex justify-center items-center w-full h-24 sm:h-20">
                 <nav className="nav    sm:bg-transparent ">
                     <div className="nav-con  relative flex justify-center p-1 m-auto gap-1 w-max rounded-md text-foreground bg-foreground/30">
-                        <button
+                        {/* <button
                             id="aboutBtn"
                             onClick={() => handleNavClick(0)}
                             className="about transition-colors cursor-pointer flex items-center px-3 rounded-md gap-1 bg-background"
                         >
                             About
-                        </button>
+                        </button> */}
                         <nav className="links [&>*]:rounded-md [&>*] [&>*]:bg-background [&>*]:bg-opacity-90 flex text-ntext gap-1 rounded-lg items-center text-sm ml:text-base [&>*]:transition-colors">
                             <a
                                 className="border border-transparent p-2 "
