@@ -1,30 +1,55 @@
+"use client";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher";
+import { useSwiperStore } from "@/wrappers/MainSwiperWrapper/MainSwiperWrapper";
 
 export default function Navbar() {
-  return (
-    <nav className="nav left-0 w-screen fixed bottom-0 pb-8 sm:bg-transparent ">
-      <div className="nav-con  relative flex justify-center p-1 m-auto gap-1.5 w-max rounded-md text-foreground bg-opacity-30 bg-foreground">
-        <button
-          id="aboutBtn"
-          className="about transition-colors cursor-pointer flex items-center px-3 rounded-md gap-1 bg-background bg-opacity-90"
-        >
-          About
-        </button>
-        <ul className="links [&>*]:rounded-md [&>*] [&>*]:bg-background [&>li]:bg-opacity-90 flex text-ntext gap-1 rounded-lg items-center text-sm ml:text-base [&>LI]:transition-colors">
-          <li className="border border-transparent p-2 " id="workBtn">
-            Recent Works
-          </li>
-          <li className="border border-transparent p-2 " id="contactBtn">
-            Contact &amp; CV
-          </li>
-          <li
-            className="border border-transparent [&>*]:rounded-md text-background "
-            id="contactBtn"
-          >
-            <ThemeSwitcher />
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+    let { swiper } = useSwiperStore();
+
+    function handleNavClick(slideIndex) {
+        // if (swiper) {
+        //     swiper.slideTo(slideIndex);
+        // }
+    }
+
+    return (
+        <div className="relative z-50 flex justify-center items-center w-full h-24 sm:h-20">
+            <nav className="nav    sm:bg-transparent ">
+                <div className="nav-con  relative flex justify-center p-1 m-auto gap-1 w-max rounded-md text-foreground bg-opacity-30 bg-foreground">
+                    <button
+                        id="aboutBtn"
+                        onClick={() => handleNavClick(0)}
+                        className="about transition-colors cursor-pointer flex items-center px-3 rounded-md gap-1 bg-background bg-opacity-90"
+                    >
+                        About
+                    </button>
+                    <nav className="links [&>*]:rounded-md [&>*] [&>*]:bg-background [&>*]:bg-opacity-90 flex text-ntext gap-1 rounded-lg items-center text-sm ml:text-base [&>*]:transition-colors">
+                        <a
+                            className="border border-transparent p-2 "
+                            id="workBtn"
+                            onClick={() => handleNavClick(1)}
+                            href="https://github.com/yousofo?tab=repositories"
+                        >
+                            Recent Works
+                        </a>
+                        <a
+                        href="https://drive.google.com/file/d/1jA9k2vd63ndzKSrnsgr8Gl2syp3GVHvc/view?usp=drive_link"
+                            className="border border-transparent p-2 "
+                            id="contactBtn"
+                            onClick={() => handleNavClick(2)}
+                        >
+                            
+                         Resume 
+                            {/* Contact &amp; CV */}
+                        </a>
+                        <a
+                            className="border border-transparent [&>*]:rounded-md text-background "
+                            id="contactBtn"
+                        >
+                            <ThemeSwitcher />
+                        </a>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    );
 }

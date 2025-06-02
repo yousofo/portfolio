@@ -40,7 +40,7 @@ body {
 }
 .test{
   /* backdrop-filter: blur(8px); */
-    background-color:  rgba(8, 8, 8, 1);
+    /* background-color:  rgba(8, 8, 8, 1); */
     position: relative;
    &::before{
     content: "";

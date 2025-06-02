@@ -15,7 +15,7 @@ const getItem =  (key) => {
    * @param value The value to save to localStorage.
    */
   const setItem = (key, value) => {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    window.localStorage.setItem(key, value);
   };
   
   export { getItem, setItem };

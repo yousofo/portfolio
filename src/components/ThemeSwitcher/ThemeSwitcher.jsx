@@ -19,6 +19,7 @@ function Index() {
     // Apply theme to the <html> tag
     document.documentElement.setAttribute("data-theme", theme);
     setItem("theme", theme);
+    console.log("Theme changed to:", theme);
   }, [theme]);
 
   return (
