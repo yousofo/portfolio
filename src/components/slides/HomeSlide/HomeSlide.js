@@ -36,27 +36,27 @@ export default function HomeSlide() {
         "bg-sky-300",
     ];
     //make hexColors
-    let hexColors = [
-        "#fbbf24",
-        "#60a5fa",
-        "#34d399",
-        "#f87171",
-        "#a78bfa",
-        "#ec4899",
-        "#facc15",
-        "#2dd4bf",
-        "#818cf8",
-        "#c084fc",
-        "#f472b6",
-        "#60a5fa",
-        "#a3e635",
-        "#22d3ee",
-        "#fb923c",
-        "#10b981",
-        "#ec4899",
-        "#8b5cf6",
-        "#e879f9",
-    ];
+    // let hexColors = [
+    //     "#fbbf24",
+    //     "#60a5fa",
+    //     "#34d399",
+    //     "#f87171",
+    //     "#a78bfa",
+    //     "#ec4899",
+    //     "#facc15",
+    //     "#2dd4bf",
+    //     "#818cf8",
+    //     "#c084fc",
+    //     "#f472b6",
+    //     "#60a5fa",
+    //     "#a3e635",
+    //     "#22d3ee",
+    //     "#fb923c",
+    //     "#10b981",
+    //     "#ec4899",
+    //     "#8b5cf6",
+    //     "#e879f9",
+    // ];
     let images = [
         "/skills/Microsoft_.NET_logo.svg.png",
         "/skills/Angular_full_color_logo.svg.png",
@@ -129,4 +129,40 @@ export default function HomeSlide() {
         </div>
     );
 }
+const tt = <svg width="100vw" height="100vh" viewBox="0 0 200 200">
+    {/* <!-- Central reference point (optional) --> */}
+    {/* <circle cx="100" cy="100" r="2" fill="white" /> */}
 
+    {/* <!-- Group of orbiting stars --> */}
+    <g id="orbiting-stars">
+        {/* <!-- You can add more or randomize angles --> */}
+        {/* {hexColors.map((color, index) => (
+            <circle
+                key={index}
+                cx={100 + 60 * Math.cos((index * Math.PI) / 5)}
+                cy={100 + 60 * Math.sin((index * Math.PI) / 5)}
+                r={0.5}
+                fill={color}
+            />
+        ))} */}
+    </g>
+
+    {/* <!-- Animation (optional, use CSS or JS as alternative) --> */}
+    <style>
+        {`
+      #orbiting-stars {
+      transform-origin: 100px 100px;
+      animation: rotate 4s linear infinite;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+      `}
+    </style>
+</svg>;
