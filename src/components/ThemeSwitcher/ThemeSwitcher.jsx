@@ -3,7 +3,7 @@ import { getItem, setItem } from "@/lib/localStorage";
 import { useEffect, useState } from "react";
 
 function Index() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   // const [theme, setTheme] = useState(() => {
   //     if (typeof window !== "undefined") {
   //       return localStorage.getItem("theme") || "light";
@@ -12,7 +12,7 @@ function Index() {
   //   });
 
   useEffect(() => {
-    setTheme(getItem("theme") || "light");
+    setTheme(getItem("theme") || "dark");
   }, []);
   
   useEffect(() => {
