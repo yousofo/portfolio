@@ -18,7 +18,7 @@ export default function Home() {
     // },[isDark]);
 
     return (
-        <div className="relative overflow-hidden p-10 h-full ">
+        <div className="relative overflow-hidden p-5 lg:p-10 h-full ">
                  {/* <button onClick={() => setIsDark(!isDark)}>Toggle</button> */}
 
                 <MainSwiperWrapper
