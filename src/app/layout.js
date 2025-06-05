@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Navbar from "@/components/Navbar/Navbar";
-
+import { Analytics } from "@vercel/analytics/next"
 const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
                     <div className="h-[100px] overflow-hidden">
                         <Navbar />
                     </div>
+                    <Analytics/>
             </body>
         </html>
     );
