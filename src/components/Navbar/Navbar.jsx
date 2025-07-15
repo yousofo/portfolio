@@ -2,6 +2,7 @@
 import * as motion from "motion/react-client";
 import ThemeSwitcher from "@/components/ThemeSwitcher/ThemeSwitcher";
 import { useSwiperStore } from "@/wrappers/MainSwiperWrapper/MainSwiperWrapper";
+import Link from "next/link";
 
 export default function Navbar() {
     let { swiper } = useSwiperStore();
@@ -9,9 +10,9 @@ export default function Navbar() {
     function handleNavClick(slideIndex) {
         // if (swiper) {
         //     swiper.slideTo(slideIndex);
-        // }
+        // } 
     }
-
+    
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0 ,translateY: 100 }}
@@ -32,14 +33,15 @@ export default function Navbar() {
                             About
                         </button> */}
                         <nav className="links [&>*]:rounded-md [&>*] [&>*]:bg-background [&>*]:bg-opacity-90 flex text-ntext gap-1 rounded-lg items-center text-sm ml:text-base [&>*]:transition-colors">
-                            <a
+                            <Link
                                 className="border border-transparent p-2 "
                                 id="workBtn"
                                 onClick={() => handleNavClick(1)}
-                                href="https://github.com/yousofo?tab=repositories"
+                                // href="https://github.com/yousofo?tab=repositories"
+                                href="/projects"
                             >
-                                Recent Works
-                            </a>
+                                Projects
+                            </Link>
                             <a
                                 href="https://drive.google.com/file/d/1jA9k2vd63ndzKSrnsgr8Gl2syp3GVHvc/view?usp=drive_link"
                                 className="border border-transparent p-2 "

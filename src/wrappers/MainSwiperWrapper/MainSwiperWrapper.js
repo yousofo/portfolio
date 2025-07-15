@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css";
 import { create } from "zustand";
 import "./styles.css"
+
 export const useSwiperStore = create((set) => ({
     swiper: 1,
     setSwiper: (swiper) => set({ swiper }),
