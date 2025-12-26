@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
     title: "Youssef Nabil",
-    description: "",
+    description: "Full Stack Web Developer",
 };
 //test
 export default function RootLayout({ children }) {
