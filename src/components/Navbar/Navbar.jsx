@@ -51,9 +51,9 @@ export default function Navbar() {
                 Resume
                 {/* Contact &amp; CV */}
               </a>
-              <div className="border border-transparent [&>*]:rounded-md text-background  " id="contactBtn">
+              {/* <div className="border border-transparent [&>*]:rounded-md text-background  " id="contactBtn">
                 <ThemeSwitcher />
-              </div>
+              </div> */}
             </nav>
           </div>
         </nav>
