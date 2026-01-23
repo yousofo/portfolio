@@ -1,35 +1,36 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-01",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
+    "@google/genai": "^1.37.0",
     "@prisma/adapter-better-sqlite3": "^7.2.0",
     "@prisma/client": "^7.2.0",
-    "@tailwindcss/postcss": "^4.1.8",
-    "@vercel/analytics": "^1.5.0",
+    "@vercel/analytics": "^1.6.1",
     "dotenv": "^17.2.3",
-    "motion": "^12.4.1",
+    "motion": "^12.23.26",
     "motion-plus": "^0.1.9",
-    "next": "15.1.9",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "swiper": "^11.2.2",
-    "zustand": "^5.0.3"
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "zustand": "^5.0.10"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/better-sqlite3": "^7.6.13",
-    "@types/node": "^25.0.3",
+    "@types/node": "^20.19.29",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "postcss": "^8.5.4",
+    "eslint-config-next": "16.1.1",
     "prisma": "^7.2.0",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
