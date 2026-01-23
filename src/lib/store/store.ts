@@ -1,6 +1,12 @@
 import { create } from "zustand";
 import { MarkupKey } from "../db/enums";
-const formHtml = await fetch("http://localhost:3000/api/v1/ui-generator?key=" + MarkupKey.contactForm).then((res) => res.json());
+
+const formHtml = await fetch("http://localhost:3000/api/v1/ui-generator?key=" + MarkupKey.contactForm)
+  .then((res) => res.json())
+  .catch((err) => ({
+    html: "",
+    css: "",
+  }));
 
 interface IStore {
   markup: {

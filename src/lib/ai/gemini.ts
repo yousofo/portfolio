@@ -88,7 +88,7 @@ const systemPrompt = `
 
 export async function generateGeminiUI(markupKey: MarkupKey, message: string): Promise<{ html: string; css: string }> {
   const gemini = new GoogleGenAI({
-    apiKey: "AIzaSyDQQ9Przkx59ZB3A199uuVNlW201FLeh4w", //process.env.GEMINI_API_KEY,
+    apiKey:  process.env.GEMINI_API_KEY, //process.env.GEMINI_API_KEY,
   });
 
   const previousMarkup = await readHtmlAndCss(markupKey);

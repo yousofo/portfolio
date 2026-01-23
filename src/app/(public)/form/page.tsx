@@ -1,5 +1,16 @@
 import UIGenereationForm from "@/modules/projects/UIGenereationForm";
- import DynamicForm from "@/modules/projects/DynamicForm";
+import DynamicForm from "@/modules/projects/DynamicForm";
+
+
+export default async function Form() {
+  return (
+    <div className="flex flex-col items-center justify-center h-screen gap-4 p-4 container mx-auto">
+      <DynamicForm />
+
+      <UIGenereationForm />
+    </div>
+  );
+}
 const style = `
  
   #contact-form {
@@ -49,14 +60,3 @@ const style = `
   }
  
 `;
-
-export default async function Page() {
-
-  return (
-    <div   className="flex flex-col items-center justify-center h-screen gap-4 p-4 container mx-auto">
-         <DynamicForm  />
- 
-      <UIGenereationForm  />
-    </div>
-  );
-}
