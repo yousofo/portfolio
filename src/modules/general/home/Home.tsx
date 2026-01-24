@@ -80,6 +80,7 @@ function Home() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{
           duration: 1,
+          delay: 0,
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
       >
@@ -102,7 +103,7 @@ function Home() {
       <div className="flex flex-wrap justify-center gap-1 mt-10">
         {images.map((imageUrl, index) => (
           <Skill key={index} delay={index * 0.1}>
-            <Image src={'/images/skills/'+imageUrl} width={50} height={50} alt="skill icon" />
+            <Image src={'/assets/skills/'+imageUrl} width={50} height={50} alt="skill icon" />
           </Skill>
         ))}
       </div>
